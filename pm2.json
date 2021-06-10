@@ -1,0 +1,4 @@
+{
+  "name": "roboape",
+  "script": "build/app.js"
+}

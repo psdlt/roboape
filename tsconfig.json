@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "noImplicitAny": true,
+    "lib": [
+      "ES6",
+      "esnext",
+      "dom"
+    ],
+    "module": "es6",
+    "target": "es6",
+    "allowJs": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+}
