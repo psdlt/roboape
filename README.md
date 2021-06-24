@@ -39,6 +39,11 @@ npm run build
 node build/syncModels.js
 ```
 
+NOTE: you _might_ also need to install `libpq-dev` or `postgresql-devel` or `libpq-devel` (depending on your OS) and `make` with `g++`:
+```bash
+apt install libpq-dev make g++
+```
+
 ## Local development
 
 If you need PostgreSQL you can spin it up quickly using Docker:
