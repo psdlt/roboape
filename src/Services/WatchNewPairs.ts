@@ -13,6 +13,7 @@ export default class WatchNewPairs {
     private abiDecoder = require('abi-decoder');
 
     private minBalance = toWei(process.env.MIN_BALANCE);
+    private minReserve = toWei(process.env.MIN_RESERVE);
     private sufficientBalance = false;
 
     constructor(
@@ -64,7 +65,7 @@ export default class WatchNewPairs {
 
         this.logger.log(`New pair created: ${values.pair}. BNB reserve: ${fromWei(bnbReserve.toFixed())}.`);
 
-        if (bnbReserve.eq(0)) {
+        if (bnbReserve.lte(this.minReserve)) {
             return;
         }
 
